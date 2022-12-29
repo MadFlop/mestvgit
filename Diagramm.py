@@ -29,7 +29,6 @@ h_b = 0.003         # в метрах
 n_b = h/h_b
 ib = np.arange(n_b)
 jb = np.array([0,1])
-print(n_b,ib,jb)
 
 
 temp = 20           # Температура бетона
@@ -91,3 +90,9 @@ for i in range(eps_b1.size):
     sigma_b1[i] = karpenkoeps(eps_b1[i])
 for i in range(eps_b2.size):
     sigma_b2[i] = karpenkoeps(eps_b2[i])
+print(sigma_b1)
+print(eps_b1)
+plt.plot(eps_b1,sigma_b1)
+plt.show()
+plt.plot(eps_b2,sigma_b2)
+plt.show()
